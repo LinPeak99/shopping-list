@@ -104,6 +104,10 @@ shopping-list/
 
 Este projeto está disponível para fins educacionais e pessoais.
 
-## Autor
+## Autores
 
-Projeto desenvolvido como aplicação de lista de compras com foco em perfil, categoria e confirmação de pedido.
+- Aoliabe Santiago
+- Diego Danilo
+- Erick Lima Moraes
+
+Projeto desenvolvido em colaboração como aplicação de lista de compras com foco em perfil, categoria e confirmação de pedido.
