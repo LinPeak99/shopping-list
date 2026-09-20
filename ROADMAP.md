@@ -2,9 +2,9 @@
 
 ## Visão geral
 
-O EAD Listy é uma aplicação desktop desenvolvida em Python com interface gráfica em Tkinter para organizar listas de compras por perfil, com controle de quantidade, preço, tipo de alimento e confirmação do pedido.
+Este documento documenta o desenvolvimento realizado até o momento no projeto EAD Listy e serve como base para futuras melhorias, refinamentos e novas entregas.
 
-Este documento registra o desenvolvimento concluído até o momento e serve como base para futuras melhorias e entregas.
+O projeto está em uma fase funcional, com interface gráfica em Tkinter, gestão de listas por perfil, cálculo de valores, confirmação de pedido e persistência local.
 
 ---
 
@@ -14,144 +14,140 @@ Este documento registra o desenvolvimento concluído até o momento e serve como
 
 #### 1. Estrutura inicial da aplicação
 - Criação da interface principal com Tkinter
-- Organização da tela em seções e blocos lógicos
-- Configuração de estilos visuais para melhor experiência do usuário
+- Organização visual em área de perfis, formulário e tabela
+- Configuração do estilo da aplicação com ttk
 
 #### 2. Gestão de perfis
-- Suporte aos perfis:
-  - Solo
-  - Duo
-  - Familia
-- Seleção de perfil com atualização da lista correspondente
-- Reset do sistema para a base padrão quando necessário
+- Perfis implementados: Solo, Duo e Familia
+- Troca dinâmica de lista conforme o perfil selecionado
+- Reinício para a base inicial quando necessário
 
 #### 3. Cadastro e edição de produtos
-- Adição de itens com:
-  - nome
-  - quantidade
-  - preço unitário
-  - tipo do alimento
-- Edição de quantidade do produto
-- Edição de preço unitário
-- Remoção de itens da lista
-- Ajuste de produtos com atualização em tempo real
+- Adição de produtos com nome, quantidade, preço e categoria
+- Validação de quantidade e preço
+- Edição de quantidade do item selecionado
+- Edição do preço unitário do item selecionado
+- Remoção de item ou remoção por quantidade
+- Atualização da tabela em tempo real
 
-#### 4. Organização por categoria
-- Controle de produtos por tipo de alimento
-- Inclusão do tipo de categoria "Bebida"
-- Exibição de subtotal por categoria
-- Total da compra calculado automaticamente
+#### 4. Organização por categoria de produto
+- Tipos disponíveis: Frutas, Frios, Fresco, Legumes, Processados, Limpeza e Bebida
+- Cálculo do subtotal por item
+- Soma do total da categoria
 
-#### 5. Lógica de negócio da compra
-- Cálculo de subtotal e total geral
-- Validação de valores e quantidade
-- Exibição de informações em tempo real
-- Confirmação final do pedido
+#### 5. Lógica de compra e confirmação
+- Cálculo total da compra
+- Validação antes da confirmação do pedido
+- Janela de pagamento
+- Opções de pagamento: Dinheiro, Cartão de crédito, Cartão de débito e Pix
+- Parcelamento para cartão de crédito de 1 a 12 vezes
+- Tela final de confirmação do pedido
 
-#### 6. Sistema de pagamento
-- Opções de pagamento
-- Suporte a cartão de crédito
-- Escolha de parcelas de 1 a 12 vezes
-- Tela de confirmação do pedido final
+#### 6. Persistência local
+- Armazenamento em JSON
+- Base de dados local para uso contínuo
+- Reinicialização automática para estado padrão ao abrir o app
 
-#### 7. Persistência local
-- Armazenamento em arquivo JSON
-- Reuso de dados entre execuções
-- Sistema com base inicial para reinicialização do uso
-
-#### 8. Documentação do projeto
-- Criação do README principal para apresentação
-- Organização das instruções de execução
-- Preparo para apresentação em repositório GitHub
+#### 7. Documentação e apresentação
+- README concluído para apresentação no GitHub
+- ROADMAP documentando evolução
+- MEMORY para preservação do contexto do projeto
 
 ---
 
-## Funcionalidades implementadas no fluxo atual
+## Funcionalidades implementadas na versão atual
 
-1. Usuário escolhe o perfil.
-2. A aplicação carrega os produtos padrão ou os dados já existentes.
-3. O usuário pode adicionar ou editar itens.
-4. A lista atualiza automaticamente com subtotal e total.
-5. O usuário confirma o pedido.
-6. O sistema solicita a forma de pagamento.
-7. Caso seja cartão, o usuário escolhe o número de parcelas.
-8. O pedido é finalizado e o app retorna ao início ou oferece nova execução.
+1. Usuário seleciona o perfil ativo.
+2. A aplicação carrega a base padrão dos produtos.
+3. O usuário inclui itens na lista.
+4. O sistema calcula o subtotal e o total da categoria.
+5. O usuário pode alterar ou remover itens.
+6. O pedido é confirmado.
+7. A forma de pagamento é definida.
+8. Se for cartão de crédito, o número de parcelas é escolhido.
+9. A confirmação final é exibida.
+10. Ao fechar o sistema, o estado volta para a base inicial.
 
 ---
 
-## Arquitetura e estrutura atual
+## Arquitetura atual
 
 ```text
 shopping-list/
-├── shopping_list_app.py      # Aplicação principal
-├── listas_personalizadas.json # Persistência local dos dados
-├── README.md                 # Documentação inicial do projeto
-├── ROADMAP.md                # Plano de desenvolvimento e evolução
-├── .gitignore                # Arquivos ignorados pelo Git
-└── .venv/                    # Ambiente virtual local
+├── shopping_list_app.py          # Aplicação principal e lógica do sistema
+├── listas_personalizadas.json    # Persistência local dos dados
+├── README.md                     # Documentação pública do projeto
+├── ROADMAP.md                    # Registro de evolução e planejamento
+├── MEMORY.md                     # Memória técnica do desenvolvimento
+├── .gitignore                    # Arquivos ignorados pelo Git
+├── .venv/                        # Ambiente virtual local
+├── ia/
+│   └── Prompt Python.md
+└── __pycache__/
 ```
 
 ---
 
-## Melhorias planejadas para futuras versões
+## Melhorias planejadas
 
 ### Prioridade alta
-- Melhorar a interface visual com identidade visual da marca EAD Listy
-- Adicionar ícone ou logotipo do sistema
-- Criar tela de apresentação inicial com nome do produto e slogan
-- Implementar validações mais robustas de entrada de dados
-- Melhorar mensagens de erro e feedback visual
+- Refinar a identidade visual da marca EAD Listy
+- Adicionar logo ou ícone do sistema
+- Melhorar a experiência de uso com tela inicial mais profissional
+- Aumentar validações de entrada e feedback visual
+- Melhorar mensagens de erro e atenção do usuário
 
 ### Prioridade média
 - Adicionar filtro por categoria
-- Permitir pesquisa de produtos por nome
-- Ordenação manual ou automática da lista
+- Permitir busca por nome de produto
+- Ordenação mais inteligente da lista
 - Exportação da lista para PDF ou TXT
-- Histórico de pedidos realizados
+- Histórico de compras realizadas
 
 ### Prioridade baixa
+- Modo administrativo para gestão de produtos padrão
 - Versionamento de listas personalizadas
-- Modo administrativo para gerenciar produtos base
+- Integração com banco de dados
 - Cadastro de usuários ou autenticação simples
-- Exportação/importação de dados em outros formatos
-- Reposição automática de estoque
+- Gestão de estoque e reposição automática
 
 ---
 
-## Evolução sugerida
+## Fases sugeridas de evolução
 
-### Fase 1 - Polimento da aplicação
-- Ajustes visuais
-- Melhor organização da tela
-- Iconografia e branding
-- Melhor UX para inserção e remoção
+### Fase 1 - Polimento visual e UX
+- ajustes visuais
+- identidade visual da marca
+- melhoria de organização da interface
+- refinamento de botões e mensagens
 
 ### Fase 2 - Funcionalidades avançadas
-- Persistência mais sofisticada
-- Histórico de compras
-- Categorias personalizadas
-- Gestão de estoque
+- filtro e busca
+- histórico de compra
+- categorias personalizadas
+- gestão de estoque
 
-### Fase 3 - Escala e profissionalização
-- Estrutura modular em arquivos
-- Testes automatizados
-- Possível migração para web ou versão híbrida
-- Integração com banco de dados
+### Fase 3 - Evolução profissional
+- modularização do código
+- testes automatizados
+- persistência mais robusta
+- migração para arquitetura web ou híbrida
 
 ---
 
 ## Observações finais
 
-O projeto já está funcional e com lógica de negócio completa para o uso de lista de compras por perfil, incluindo categoria, valores, pagamento e confirmação de pedido. A partir daqui, o foco principal pode ser em refinamento visual, organização do código e expansão de funcionalidades para uma versão mais robusta e profissional.
+O projeto já alcançou uma versão funcional completa para o uso de lista de compras por perfil. Ele inclui lógica de negócio, cálculo financeiro, confirmação de pedido e fluxo de pagamento. A partir deste ponto, o foco principal pode ser em refinamento de UX, organização estrutural e expansão das funcionalidades para uma versão mais robusta e profissional.
 
 ---
 
 ## Histórico resumido
 
-- Criação da aplicação principal em Python/Tkinter
-- Implementação de perfis e listas personalizadas
-- Desenvolvimento de cálculo de totais e subtotais
-- Suporte a pagamento e parcelamento
-- Inclusão do tipo "Bebida"
-- Documentação inicial em README
-- Criação deste ROADMAP para acompanhamento do projeto
+- Criação da interface principal em Tkinter
+- Implementação dos perfis Solo, Duo e Familia
+- Desenvolvimento do cadastro e edição de itens
+- Ajuste de cálculo de subtotal e total
+- Implementação de pagamento e parcelamento
+- Inclusão do tipo Bebida
+- Criação de documentação e memória de contexto
+- Preparação do projeto para evolução e apresentação

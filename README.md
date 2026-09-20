@@ -1,49 +1,43 @@
-# EAD Listy - Estoque, Alimentação e Domicílio
+# EAD Listy
 
-Aplicação desktop em Python com interface gráfica usando Tkinter para gerenciar listas de compras por perfil, com categorias, valores, alteração de itens e confirmação de pedido.
+Aplicação desktop em Python para organização de compras por perfil, com controle de quantidade, preço unitário, categoria de produtos e confirmação final do pedido.
 
 ## Visão geral
 
-Este projeto foi desenvolvido para facilitar a organização de compras por perfil:
+O EAD Listy foi desenvolvido para facilitar a gestão de listas de compras em cenários de uso pessoal ou familiar. A aplicação permite selecionar o perfil ativo, adicionar itens, ajustar valores e concluir a compra com confirmação de pagamento.
+
+Os perfis disponíveis são:
 
 - Solo
 - Duo
 - Familia
 
-A aplicação permite:
+## Funcionalidades implementadas
 
-- adicionar produtos à lista
-- remover itens ou quantidades
-- alterar quantidade e preço unitário
-- selecionar o tipo do alimento
-- visualizar subtotal e total da categoria
-- confirmar pedido e escolher a forma de pagamento
-- configurar parcelamento em cartão de crédito
-- reiniciar o sistema com os produtos padrão
-
-## Funcionalidades principais
-
-- Gestão de listas por perfil
-- Produtos com categoria por tipo de alimento
-- Cálculo automático de subtotal e total
-- Atualização em tempo real da tabela
+- Cadastro de produtos com nome, quantidade, preço e categoria
+- Suporte a múltiplos perfis de compra
+- Atualização da tabela em tempo real
+- Ajuste de quantidade e preço dos itens já cadastrados
+- Remoção de itens ou de quantidade específica
+- Cálculo automático de subtotal e total da categoria
+- Confirmação de pedido com escolha de forma de pagamento
+- Parcelamento em cartão de crédito de 1 a 12 vezes
+- Reinicialização da base padrão ao fechar a aplicação
 - Persistência local em arquivo JSON
-- Confirmação de pedido com forma de pagamento
-- Parcelamento de 1 a 12 vezes em cartão de crédito
-- Interface simples e prática para uso diário
 
 ## Tecnologias
 
 - Python 3
 - Tkinter
-- JSON para armazenamento local
+- ttk
+- JSON
 
 ## Requisitos
 
 - Python 3.9 ou superior
 - Tkinter instalado no ambiente Python
 
-No Windows, normalmente o Tkinter já vem com a instalação do Python. Caso necessário, confirme com:
+Verificação rápida no Windows:
 
 ```bash
 python -m tkinter
@@ -51,20 +45,19 @@ python -m tkinter
 
 ## Como executar
 
-1. Abra o terminal
-2. Acesse a pasta do projeto:
+1. Acesse a pasta do projeto:
 
 ```bash
 cd "c:\Workspace\VScode\shopping-list"
 ```
 
-3. Execute a aplicação:
+2. Execute a aplicação:
 
 ```bash
 py .\shopping_list_app.py
 ```
 
-Ou diretamente com o Python:
+Ou:
 
 ```bash
 python .\shopping_list_app.py
@@ -74,31 +67,33 @@ python .\shopping_list_app.py
 
 ```text
 shopping-list/
-├── shopping_list_app.py   # Aplicação principal
-├── listas_personalizadas.json  # Arquivo de persistência local
-├── README.md              # Documentação do projeto
-└── .gitignore             # Configuração Git (se existir)
+├── shopping_list_app.py          # Aplicação principal
+├── listas_personalizadas.json    # Dados persistidos por perfil
+├── README.md                     # Documentação pública do projeto
+├── ROADMAP.md                    # Plano de desenvolvimento e evolução
+├── MEMORY.md                     # Contexto técnico e decisões do projeto
+├── .gitignore                    # Arquivos ignorados pelo Git
+├── .venv/                        # Ambiente virtual local
+└── ia/
+    └── Prompt Python.md
 ```
 
 ## Fluxo de uso
 
-1. Selecione o perfil desejado: Solo, Duo ou Familia
-2. Cadastre um novo produto com:
-   - nome
-   - quantidade
-   - preço unitário
-   - tipo do alimento
-3. Ajuste quantidade ou preço caso necessário
-4. Remova itens ou unidades conforme a necessidade
-5. Confirme o pedido
-6. Escolha a forma de pagamento
-7. Se for cartão de crédito, escolha o número de parcelas
-8. Veja o valor total final da compra
+1. Escolha o perfil desejado: Solo, Duo ou Familia.
+2. Cadastre o produto com nome, quantidade, preço e tipo.
+3. Ajuste valores conforme necessário.
+4. Remova itens ou quantidades quando desejado.
+5. Confirme o pedido.
+6. Escolha a forma de pagamento.
+7. Se for cartão de crédito, informe o número de parcelas.
+8. Confirme o valor final da compra.
 
-## Observações
+## Observações importantes
 
-- Ao fechar o aplicativo, o sistema volta aos produtos padrão para reiniciar a experiência com a base inicial.
-- Os dados são salvos localmente em JSON para facilitar o uso contínuo da aplicação.
+- A aplicação reseta os itens para a base padrão ao fechar.
+- A persistência é local, em arquivo JSON.
+- A lógica atual foi construída em estrutura procedural, com foco em funcionalidade e uso prático.
 
 ## Licença
 
@@ -110,4 +105,4 @@ Este projeto está disponível para fins educacionais e pessoais.
 - Diego Danilo
 - Erick Lima Moraes
 
-Projeto desenvolvido em colaboração como aplicação de lista de compras com foco em perfil, categoria e confirmação de pedido.
+Projeto desenvolvido em colaboração para gestão de lista de compras com foco em perfis, categoria de produtos e confirmação de pedido.
