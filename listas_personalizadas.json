@@ -1,0 +1,74 @@
+{
+  "Solo": [
+    {
+      "nome": "Leite",
+      "quantidade": 2,
+      "preco_unitario": 20.0,
+      "tipo": "Frios"
+    },
+    {
+      "nome": "Pão",
+      "quantidade": 4,
+      "preco_unitario": 15.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Banana",
+      "quantidade": 5,
+      "preco_unitario": 12.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Uva",
+      "quantidade": 3,
+      "preco_unitario": 18.0,
+      "tipo": "Frutas"
+    }
+  ],
+  "Duo": [
+    {
+      "nome": "Arroz",
+      "quantidade": 5,
+      "preco_unitario": 18.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Feijão",
+      "quantidade": 3,
+      "preco_unitario": 35.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Suco",
+      "quantidade": 5,
+      "preco_unitario": 46.0,
+      "tipo": "Processados"
+    }
+  ],
+  "Familia": [
+    {
+      "nome": "Arroz",
+      "quantidade": 10,
+      "preco_unitario": 24.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Macarrão",
+      "quantidade": 6,
+      "preco_unitario": 18.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Frango",
+      "quantidade": 5,
+      "preco_unitario": 42.0,
+      "tipo": "Frios"
+    },
+    {
+      "nome": "Sabão",
+      "quantidade": 3,
+      "preco_unitario": 84.0,
+      "tipo": "Limpeza"
+    }
+  ]
+}
