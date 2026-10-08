@@ -1,10 +1,12 @@
-# EAD Listy
+# EAD List
+
+*Essencial para a sua rotina, Acessível ao seu bolso, Direto no mercado.*
 
 Aplicação desktop em Python para organização de compras por perfil, com controle de quantidade, preço unitário, categoria de produtos e confirmação final do pedido.
 
 ## Visão geral
 
-O EAD Listy foi desenvolvido para facilitar a gestão de listas de compras em cenários de uso pessoal ou familiar. A aplicação permite selecionar o perfil ativo, adicionar itens, ajustar valores e concluir a compra com confirmação de pagamento.
+O EAD List foi desenvolvido para facilitar a gestão de listas de compras em cenários de uso pessoal ou familiar. A aplicação permite selecionar o perfil ativo, adicionar itens, ajustar valores e concluir a compra com confirmação de pagamento.
 
 Os perfis disponíveis são:
 

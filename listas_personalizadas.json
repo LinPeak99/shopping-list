@@ -1,73 +1,655 @@
 {
   "Solo": [
     {
-      "nome": "Leite",
-      "quantidade": 2,
-      "preco_unitario": 20.0,
-      "tipo": "Frios"
+      "nome": "Café",
+      "quantidade": 1,
+      "preco_unitario": 28.0,
+      "tipo": "Bebida"
     },
     {
-      "nome": "Pão",
+      "nome": "Leite",
+      "quantidade": 1,
+      "preco_unitario": 8.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Chá",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Bananas",
       "quantidade": 4,
-      "preco_unitario": 15.0,
+      "preco_unitario": 1.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Maçãs",
+      "quantidade": 2,
+      "preco_unitario": 3.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Limões",
+      "quantidade": 2,
+      "preco_unitario": 2.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Ovos (dúzia)",
+      "quantidade": 1,
+      "preco_unitario": 16.0,
       "tipo": "Fresco"
     },
     {
-      "nome": "Banana",
-      "quantidade": 5,
-      "preco_unitario": 12.0,
-      "tipo": "Frutas"
+      "nome": "Queijo fatiado",
+      "quantidade": 1,
+      "preco_unitario": 18.0,
+      "tipo": "Fresco"
     },
     {
-      "nome": "Uva",
-      "quantidade": 3,
+      "nome": "Peito de frango (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 35.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Cebola (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Alho",
+      "quantidade": 1,
+      "preco_unitario": 2.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Batata (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 8.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Cenoura (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Tomate (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Arroz (pacote 5 kg)",
+      "quantidade": 1,
+      "preco_unitario": 38.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Feijão (pacote 1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 11.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Azeite (500 ml)",
+      "quantidade": 1,
+      "preco_unitario": 45.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Pão de forma",
+      "quantidade": 1,
+      "preco_unitario": 12.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Aveia (500 g)",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Molho de tomate",
+      "quantidade": 2,
+      "preco_unitario": 4.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Detergente neutro",
+      "quantidade": 1,
+      "preco_unitario": 4.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Sabão em pó (1 kg)",
+      "quantidade": 1,
       "preco_unitario": 18.0,
-      "tipo": "Frutas"
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Amaciante (1 L)",
+      "quantidade": 1,
+      "preco_unitario": 14.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Papel higiênico (4 rolos)",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Sabonete",
+      "quantidade": 2,
+      "preco_unitario": 3.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Creme dental",
+      "quantidade": 1,
+      "preco_unitario": 9.0,
+      "tipo": "Limpeza"
     }
   ],
   "Duo": [
     {
-      "nome": "Arroz",
-      "quantidade": 5,
+      "nome": "Café",
+      "quantidade": 1,
+      "preco_unitario": 30.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Leite",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Suco concentrado",
+      "quantidade": 2,
+      "preco_unitario": 15.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Água com gás",
+      "quantidade": 2,
+      "preco_unitario": 5.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Bananas",
+      "quantidade": 8,
+      "preco_unitario": 1.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Maçãs",
+      "quantidade": 4,
+      "preco_unitario": 2.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Laranjas",
+      "quantidade": 4,
+      "preco_unitario": 2.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Mamão",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Uva (1 kg)",
+      "quantidade": 1,
       "preco_unitario": 18.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Ovos (2 dúzias)",
+      "quantidade": 1,
+      "preco_unitario": 28.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Queijo mussarela (500 g)",
+      "quantidade": 1,
+      "preco_unitario": 28.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Peito de peru (300 g)",
+      "quantidade": 1,
+      "preco_unitario": 18.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Carne moída (kg)",
+      "quantidade": 2,
+      "preco_unitario": 42.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Filé de frango (kg)",
+      "quantidade": 2,
+      "preco_unitario": 34.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Cebola (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Alho",
+      "quantidade": 2,
+      "preco_unitario": 2.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Batata (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Cenoura (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Abobrinha",
+      "quantidade": 2,
+      "preco_unitario": 4.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Pimentão",
+      "quantidade": 2,
+      "preco_unitario": 5.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Tomate (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 9.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Arroz (pacote 5 kg)",
+      "quantidade": 1,
+      "preco_unitario": 35.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Feijão (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 12.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Macarrão",
+      "quantidade": 2,
+      "preco_unitario": 7.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Azeite (500 ml)",
+      "quantidade": 1,
+      "preco_unitario": 60.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Molho de tomate",
+      "quantidade": 2,
+      "preco_unitario": 5.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Pão integral",
+      "quantidade": 1,
+      "preco_unitario": 14.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Biscoitos",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Detergente neutro",
+      "quantidade": 3,
+      "preco_unitario": 4.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Desinfetante (2 L)",
+      "quantidade": 1,
+      "preco_unitario": 16.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Sabão em pó (2 kg)",
+      "quantidade": 1,
+      "preco_unitario": 33.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Amaciante (2 L)",
+      "quantidade": 1,
+      "preco_unitario": 18.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Papel higiênico (12 rolos)",
+      "quantidade": 1,
+      "preco_unitario": 18.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Papel toalha",
+      "quantidade": 2,
+      "preco_unitario": 4.5,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Esponja de pia",
+      "quantidade": 2,
+      "preco_unitario": 3.0,
+      "tipo": "Limpeza"
+    }
+  ],
+  "Familia": [
+    {
+      "nome": "Café",
+      "quantidade": 2,
+      "preco_unitario": 29.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Leite (caixa com 12 unidades)",
+      "quantidade": 1,
+      "preco_unitario": 78.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Sucos variados",
+      "quantidade": 3,
+      "preco_unitario": 12.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Achocolatado",
+      "quantidade": 1,
+      "preco_unitario": 20.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Água mineral (galão 5 L)",
+      "quantidade": 2,
+      "preco_unitario": 15.0,
+      "tipo": "Bebida"
+    },
+    {
+      "nome": "Bananas",
+      "quantidade": 12,
+      "preco_unitario": 1.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Maçãs",
+      "quantidade": 8,
+      "preco_unitario": 2.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Laranjas",
+      "quantidade": 8,
+      "preco_unitario": 2.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Melancia",
+      "quantidade": 1,
+      "preco_unitario": 22.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Morango",
+      "quantidade": 1,
+      "preco_unitario": 18.0,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Limões",
+      "quantidade": 4,
+      "preco_unitario": 1.5,
+      "tipo": "Frutas"
+    },
+    {
+      "nome": "Ovos (cartela com 30 unidades)",
+      "quantidade": 1,
+      "preco_unitario": 25.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Queijo (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 40.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Presunto (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 30.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Carne bovina (kg)",
+      "quantidade": 2,
+      "preco_unitario": 42.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Frango (kg)",
+      "quantidade": 2,
+      "preco_unitario": 26.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Peixe (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 40.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Iogurtes",
+      "quantidade": 8,
+      "preco_unitario": 3.0,
+      "tipo": "Fresco"
+    },
+    {
+      "nome": "Cebola (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Alho",
+      "quantidade": 2,
+      "preco_unitario": 2.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Batata (pacote 2 kg)",
+      "quantidade": 1,
+      "preco_unitario": 15.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Cenoura (1 kg)",
+      "quantidade": 1,
+      "preco_unitario": 8.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Tomate (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 9.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Abóbora (2 kg)",
+      "quantidade": 2,
+      "preco_unitario": 7.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Brócolis",
+      "quantidade": 1,
+      "preco_unitario": 10.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Alface",
+      "quantidade": 2,
+      "preco_unitario": 5.0,
+      "tipo": "Legumes"
+    },
+    {
+      "nome": "Arroz (pacote 5 kg)",
+      "quantidade": 1,
+      "preco_unitario": 32.0,
       "tipo": "Processados"
     },
     {
       "nome": "Feijão",
       "quantidade": 3,
-      "preco_unitario": 35.0,
+      "preco_unitario": 9.0,
       "tipo": "Processados"
     },
     {
-      "nome": "Suco",
-      "quantidade": 5,
-      "preco_unitario": 46.0,
-      "tipo": "Processados"
-    }
-  ],
-  "Familia": [
-    {
-      "nome": "Arroz",
-      "quantidade": 10,
-      "preco_unitario": 24.0,
+      "nome": "Macarrão variado",
+      "quantidade": 3,
+      "preco_unitario": 7.0,
       "tipo": "Processados"
     },
     {
-      "nome": "Macarrão",
-      "quantidade": 6,
+      "nome": "Azeite (500 ml)",
+      "quantidade": 1,
+      "preco_unitario": 40.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Óleo de soja (2 L)",
+      "quantidade": 1,
+      "preco_unitario": 15.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Extrato de tomate",
+      "quantidade": 3,
+      "preco_unitario": 4.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Cereais matinais",
+      "quantidade": 1,
       "preco_unitario": 18.0,
       "tipo": "Processados"
     },
     {
-      "nome": "Frango",
-      "quantidade": 5,
-      "preco_unitario": 42.0,
-      "tipo": "Frios"
+      "nome": "Pães variados",
+      "quantidade": 2,
+      "preco_unitario": 13.0,
+      "tipo": "Processados"
     },
     {
-      "nome": "Sabão",
-      "quantidade": 3,
-      "preco_unitario": 84.0,
+      "nome": "Biscoitos doces",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Biscoitos salgados",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Processados"
+    },
+    {
+      "nome": "Detergente (fardo com 12 unidades)",
+      "quantidade": 1,
+      "preco_unitario": 36.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Sabão em pó (3 kg)",
+      "quantidade": 1,
+      "preco_unitario": 36.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Amaciante (2 unidades)",
+      "quantidade": 2,
+      "preco_unitario": 14.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Desinfetante",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Água sanitária",
+      "quantidade": 2,
+      "preco_unitario": 6.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Papel higiênico (fardo)",
+      "quantidade": 1,
+      "preco_unitario": 43.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Papel toalha",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Saco de lixo",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Sabonetes",
+      "quantidade": 6,
+      "preco_unitario": 3.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Xampus",
+      "quantidade": 2,
+      "preco_unitario": 15.0,
+      "tipo": "Limpeza"
+    },
+    {
+      "nome": "Creme dental",
+      "quantidade": 2,
+      "preco_unitario": 8.0,
       "tipo": "Limpeza"
     }
   ]

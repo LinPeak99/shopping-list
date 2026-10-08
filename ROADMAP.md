@@ -1,8 +1,8 @@
-# ROADMAP - EAD Listy
+# ROADMAP - EAD List
 
 ## Visão geral
 
-Este documento documenta o desenvolvimento realizado até o momento no projeto EAD Listy e serve como base para futuras melhorias, refinamentos e novas entregas.
+Este documento documenta o desenvolvimento realizado até o momento no projeto EAD List e serve como base para futuras melhorias, refinamentos e novas entregas.
 
 O projeto está em uma fase funcional, com interface gráfica em Tkinter, gestão de listas por perfil, cálculo de valores, confirmação de pedido e persistência local.
 
@@ -91,7 +91,7 @@ shopping-list/
 ## Melhorias planejadas
 
 ### Prioridade alta
-- Refinar a identidade visual da marca EAD Listy
+- Refinar a identidade visual da marca EAD List
 - Adicionar logo ou ícone do sistema
 - Melhorar a experiência de uso com tela inicial mais profissional
 - Aumentar validações de entrada e feedback visual

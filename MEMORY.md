@@ -1,8 +1,8 @@
-# MEMORY - EAD Listy
+# MEMORY - EAD List
 
 ## Visão geral
 
-Este arquivo registra a memória de trabalho do projeto EAD Listy com base no estado real do código atual. Ele foi criado para preservar o contexto do desenvolvimento, manter a consistência das decisões técnicas e facilitar a continuidade por outros agentes de IA ou desenvolvedores.
+Este arquivo registra a memória de trabalho do projeto EAD List com base no estado real do código atual. Ele foi criado para preservar o contexto do desenvolvimento, manter a consistência das decisões técnicas e facilitar a continuidade por outros agentes de IA ou desenvolvedores.
 
 A aplicação atual já está funcional e implementa a lógica principal de listagem de compras por perfil, cálculo financeiro, persistência em JSON e confirmação de pedido.
 
@@ -10,7 +10,8 @@ A aplicação atual já está funcional e implementa a lógica principal de list
 
 ## 1. Contexto do projeto
 
-- Nome do software: EAD Listy
+- Nome do software: EAD List
+- Slogan: Essencial para a sua rotina, Acessível ao seu bolso, Direto no mercado.
 - Tipo: aplicação desktop em Python
 - Interface: Tkinter + ttk
 - Persistência: JSON local
@@ -139,11 +140,12 @@ A lógica valida entradas e evita valores inválidos antes de gravar os dados.
 ### Estilo visual
 - O tema é configurado com ttk.Style().
 - Tema atual: "clam".
-- A janela principal mostra o título EAD Listy.
+- A janela principal mostra o título EAD List e o slogan da marca.
 
 ### Nome da marca
-- O nome do software foi definido como EAD Listy.
-- Esse nome deve ser mantido em documentos, interface e comunicação do projeto.
+- O nome do software é EAD List.
+- O slogan é "Essencial para a sua rotina, Acessível ao seu bolso, Direto no mercado."
+- Nome e slogan devem ser mantidos em documentos, interface e comunicação do projeto.
 
 ---
 
@@ -185,7 +187,7 @@ A lógica valida entradas e evita valores inválidos antes de gravar os dados.
 
 1. O programa inicia em principal().
 2. A base padrão é carregada via carregar_dados_iniciais().
-3. A janela principal do EAD Listy abre.
+3. A janela principal do EAD List abre.
 4. O usuário escolhe um perfil: Solo, Duo ou Familia.
 5. A tabela lista os itens daquele perfil.
 6. O usuário preenche os campos de produto, quantidade e preço.
@@ -226,7 +228,7 @@ A lógica valida entradas e evita valores inválidos antes de gravar os dados.
 
 Ao continuar o desenvolvimento, o agente deve respeitar as regras abaixo:
 
-- manter o nome EAD Listy em todos os pontos do projeto
+- manter o nome EAD List e o slogan em todos os pontos do projeto
 - preservar a lógica de perfis Solo/Duo/Familia
 - manter a lógica de base padrão e reset ao fechar
 - respeitar o cálculo de subtotal e total
@@ -252,4 +254,4 @@ Sempre que houver alteração relevante, registrar:
 
 ## 10. Resumo executivo
 
-O EAD Listy evoluiu para uma aplicação funcional de listagem de compra por perfil, com interface em Tkinter, persistência em JSON, cálculo de valores e confirmação de pedido. O sistema já consolidou sua lógica principal e esta memória serve como referência para garantir consistência em futuras evoluções, preservando a base do trabalho realizado até o momento.
+O EAD List evoluiu para uma aplicação funcional de listagem de compra por perfil, com interface em Tkinter, persistência em JSON, cálculo de valores e confirmação de pedido. O sistema já consolidou sua lógica principal e esta memória serve como referência para garantir consistência em futuras evoluções, preservando a base do trabalho realizado até o momento.

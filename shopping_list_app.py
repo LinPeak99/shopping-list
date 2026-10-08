@@ -13,21 +13,118 @@ ARQUIVO_PERSISTENCIA = os.path.join(os.path.dirname(__file__), "listas_personali
 # Estrutura base do vetor de produtos por perfil. Cada item representa uma posição do vetor.
 BASE_VETOR_PRODUTOS = {
     "Solo": [
-        {"nome": "Leite", "quantidade": 2, "preco_unitario": 20.00, "tipo": "Frios"},
-        {"nome": "Pão", "quantidade": 4, "preco_unitario": 15.00, "tipo": "Fresco"},
-        {"nome": "Banana", "quantidade": 5, "preco_unitario": 12.00, "tipo": "Frutas"},
-        {"nome": "Uva", "quantidade": 3, "preco_unitario": 18.00, "tipo": "Frutas"},
+        {"nome": "Café", "quantidade": 1, "preco_unitario": 28.00, "tipo": "Bebida"},
+        {"nome": "Leite", "quantidade": 1, "preco_unitario": 8.00, "tipo": "Bebida"},
+        {"nome": "Chá", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Bebida"},
+        {"nome": "Bananas", "quantidade": 4, "preco_unitario": 1.50, "tipo": "Frutas"},
+        {"nome": "Maçãs", "quantidade": 2, "preco_unitario": 3.00, "tipo": "Frutas"},
+        {"nome": "Limões", "quantidade": 2, "preco_unitario": 2.00, "tipo": "Frutas"},
+        {"nome": "Ovos (dúzia)", "quantidade": 1, "preco_unitario": 16.00, "tipo": "Fresco"},
+        {"nome": "Queijo fatiado", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Fresco"},
+        {"nome": "Peito de frango (1 kg)", "quantidade": 1, "preco_unitario": 35.00, "tipo": "Fresco"},
+        {"nome": "Cebola (1 kg)", "quantidade": 1, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Alho", "quantidade": 1, "preco_unitario": 2.00, "tipo": "Legumes"},
+        {"nome": "Batata (1 kg)", "quantidade": 1, "preco_unitario": 8.00, "tipo": "Legumes"},
+        {"nome": "Cenoura (1 kg)", "quantidade": 1, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Tomate (1 kg)", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Legumes"},
+        {"nome": "Arroz (pacote 5 kg)", "quantidade": 1, "preco_unitario": 38.00, "tipo": "Processados"},
+        {"nome": "Feijão (pacote 1 kg)", "quantidade": 1, "preco_unitario": 11.00, "tipo": "Processados"},
+        {"nome": "Azeite (500 ml)", "quantidade": 1, "preco_unitario": 45.00, "tipo": "Processados"},
+        {"nome": "Pão de forma", "quantidade": 1, "preco_unitario": 12.00, "tipo": "Processados"},
+        {"nome": "Aveia (500 g)", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Processados"},
+        {"nome": "Molho de tomate", "quantidade": 2, "preco_unitario": 4.00, "tipo": "Processados"},
+        {"nome": "Detergente neutro", "quantidade": 1, "preco_unitario": 4.00, "tipo": "Limpeza"},
+        {"nome": "Sabão em pó (1 kg)", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Limpeza"},
+        {"nome": "Amaciante (1 L)", "quantidade": 1, "preco_unitario": 14.00, "tipo": "Limpeza"},
+        {"nome": "Papel higiênico (4 rolos)", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Limpeza"},
+        {"nome": "Sabonete", "quantidade": 2, "preco_unitario": 3.00, "tipo": "Limpeza"},
+        {"nome": "Creme dental", "quantidade": 1, "preco_unitario": 9.00, "tipo": "Limpeza"},
     ],
     "Duo": [
-        {"nome": "Arroz", "quantidade": 5, "preco_unitario": 18.00, "tipo": "Processados"},
-        {"nome": "Feijão", "quantidade": 3, "preco_unitario": 35.00, "tipo": "Processados"},
-        {"nome": "Suco", "quantidade": 5, "preco_unitario": 46.00, "tipo": "Processados"},
+        {"nome": "Café", "quantidade": 1, "preco_unitario": 30.00, "tipo": "Bebida"},
+        {"nome": "Leite", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Bebida"},
+        {"nome": "Suco concentrado", "quantidade": 2, "preco_unitario": 15.00, "tipo": "Bebida"},
+        {"nome": "Água com gás", "quantidade": 2, "preco_unitario": 5.00, "tipo": "Bebida"},
+        {"nome": "Bananas", "quantidade": 8, "preco_unitario": 1.50, "tipo": "Frutas"},
+        {"nome": "Maçãs", "quantidade": 4, "preco_unitario": 2.50, "tipo": "Frutas"},
+        {"nome": "Laranjas", "quantidade": 4, "preco_unitario": 2.00, "tipo": "Frutas"},
+        {"nome": "Mamão", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Frutas"},
+        {"nome": "Uva (1 kg)", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Frutas"},
+        {"nome": "Ovos (2 dúzias)", "quantidade": 1, "preco_unitario": 28.00, "tipo": "Fresco"},
+        {"nome": "Queijo mussarela (500 g)", "quantidade": 1, "preco_unitario": 28.00, "tipo": "Fresco"},
+        {"nome": "Peito de peru (300 g)", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Fresco"},
+        {"nome": "Carne moída (kg)", "quantidade": 2, "preco_unitario": 42.00, "tipo": "Fresco"},
+        {"nome": "Filé de frango (kg)", "quantidade": 2, "preco_unitario": 34.00, "tipo": "Fresco"},
+        {"nome": "Cebola (2 kg)", "quantidade": 2, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Alho", "quantidade": 2, "preco_unitario": 2.00, "tipo": "Legumes"},
+        {"nome": "Batata (2 kg)", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Legumes"},
+        {"nome": "Cenoura (1 kg)", "quantidade": 1, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Abobrinha", "quantidade": 2, "preco_unitario": 4.00, "tipo": "Legumes"},
+        {"nome": "Pimentão", "quantidade": 2, "preco_unitario": 5.00, "tipo": "Legumes"},
+        {"nome": "Tomate (2 kg)", "quantidade": 2, "preco_unitario": 9.00, "tipo": "Legumes"},
+        {"nome": "Arroz (pacote 5 kg)", "quantidade": 1, "preco_unitario": 35.00, "tipo": "Processados"},
+        {"nome": "Feijão (1 kg)", "quantidade": 1, "preco_unitario": 12.00, "tipo": "Processados"},
+        {"nome": "Macarrão", "quantidade": 2, "preco_unitario": 7.00, "tipo": "Processados"},
+        {"nome": "Azeite (500 ml)", "quantidade": 1, "preco_unitario": 60.00, "tipo": "Processados"},
+        {"nome": "Molho de tomate", "quantidade": 2, "preco_unitario": 5.00, "tipo": "Processados"},
+        {"nome": "Pão integral", "quantidade": 1, "preco_unitario": 14.00, "tipo": "Processados"},
+        {"nome": "Biscoitos", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Processados"},
+        {"nome": "Detergente neutro", "quantidade": 3, "preco_unitario": 4.00, "tipo": "Limpeza"},
+        {"nome": "Desinfetante (2 L)", "quantidade": 1, "preco_unitario": 16.00, "tipo": "Limpeza"},
+        {"nome": "Sabão em pó (2 kg)", "quantidade": 1, "preco_unitario": 33.00, "tipo": "Limpeza"},
+        {"nome": "Amaciante (2 L)", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Limpeza"},
+        {"nome": "Papel higiênico (12 rolos)", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Limpeza"},
+        {"nome": "Papel toalha", "quantidade": 2, "preco_unitario": 4.50, "tipo": "Limpeza"},
+        {"nome": "Esponja de pia", "quantidade": 2, "preco_unitario": 3.00, "tipo": "Limpeza"},
     ],
     "Familia": [
-        {"nome": "Arroz", "quantidade": 10, "preco_unitario": 24.00, "tipo": "Processados"},
-        {"nome": "Macarrão", "quantidade": 6, "preco_unitario": 18.00, "tipo": "Processados"},
-        {"nome": "Frango", "quantidade": 5, "preco_unitario": 42.00, "tipo": "Frios"},
-        {"nome": "Sabão", "quantidade": 3, "preco_unitario": 84.00, "tipo": "Limpeza"},
+        {"nome": "Café", "quantidade": 2, "preco_unitario": 29.00, "tipo": "Bebida"},
+        {"nome": "Leite (caixa com 12 unidades)", "quantidade": 1, "preco_unitario": 78.00, "tipo": "Bebida"},
+        {"nome": "Sucos variados", "quantidade": 3, "preco_unitario": 12.00, "tipo": "Bebida"},
+        {"nome": "Achocolatado", "quantidade": 1, "preco_unitario": 20.00, "tipo": "Bebida"},
+        {"nome": "Água mineral (galão 5 L)", "quantidade": 2, "preco_unitario": 15.00, "tipo": "Bebida"},
+        {"nome": "Bananas", "quantidade": 12, "preco_unitario": 1.50, "tipo": "Frutas"},
+        {"nome": "Maçãs", "quantidade": 8, "preco_unitario": 2.50, "tipo": "Frutas"},
+        {"nome": "Laranjas", "quantidade": 8, "preco_unitario": 2.00, "tipo": "Frutas"},
+        {"nome": "Melancia", "quantidade": 1, "preco_unitario": 22.00, "tipo": "Frutas"},
+        {"nome": "Morango", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Frutas"},
+        {"nome": "Limões", "quantidade": 4, "preco_unitario": 1.50, "tipo": "Frutas"},
+        {"nome": "Ovos (cartela com 30 unidades)", "quantidade": 1, "preco_unitario": 25.00, "tipo": "Fresco"},
+        {"nome": "Queijo (1 kg)", "quantidade": 1, "preco_unitario": 40.00, "tipo": "Fresco"},
+        {"nome": "Presunto (1 kg)", "quantidade": 1, "preco_unitario": 30.00, "tipo": "Fresco"},
+        {"nome": "Carne bovina (kg)", "quantidade": 2, "preco_unitario": 42.00, "tipo": "Fresco"},
+        {"nome": "Frango (kg)", "quantidade": 2, "preco_unitario": 26.00, "tipo": "Fresco"},
+        {"nome": "Peixe (1 kg)", "quantidade": 1, "preco_unitario": 40.00, "tipo": "Fresco"},
+        {"nome": "Iogurtes", "quantidade": 8, "preco_unitario": 3.00, "tipo": "Fresco"},
+        {"nome": "Cebola (2 kg)", "quantidade": 2, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Alho", "quantidade": 2, "preco_unitario": 2.00, "tipo": "Legumes"},
+        {"nome": "Batata (pacote 2 kg)", "quantidade": 1, "preco_unitario": 15.00, "tipo": "Legumes"},
+        {"nome": "Cenoura (1 kg)", "quantidade": 1, "preco_unitario": 8.00, "tipo": "Legumes"},
+        {"nome": "Tomate (2 kg)", "quantidade": 2, "preco_unitario": 9.00, "tipo": "Legumes"},
+        {"nome": "Abóbora (2 kg)", "quantidade": 2, "preco_unitario": 7.00, "tipo": "Legumes"},
+        {"nome": "Brócolis", "quantidade": 1, "preco_unitario": 10.00, "tipo": "Legumes"},
+        {"nome": "Alface", "quantidade": 2, "preco_unitario": 5.00, "tipo": "Legumes"},
+        {"nome": "Arroz (pacote 5 kg)", "quantidade": 1, "preco_unitario": 32.00, "tipo": "Processados"},
+        {"nome": "Feijão", "quantidade": 3, "preco_unitario": 9.00, "tipo": "Processados"},
+        {"nome": "Macarrão variado", "quantidade": 3, "preco_unitario": 7.00, "tipo": "Processados"},
+        {"nome": "Azeite (500 ml)", "quantidade": 1, "preco_unitario": 40.00, "tipo": "Processados"},
+        {"nome": "Óleo de soja (2 L)", "quantidade": 1, "preco_unitario": 15.00, "tipo": "Processados"},
+        {"nome": "Extrato de tomate", "quantidade": 3, "preco_unitario": 4.00, "tipo": "Processados"},
+        {"nome": "Cereais matinais", "quantidade": 1, "preco_unitario": 18.00, "tipo": "Processados"},
+        {"nome": "Pães variados", "quantidade": 2, "preco_unitario": 13.00, "tipo": "Processados"},
+        {"nome": "Biscoitos doces", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Processados"},
+        {"nome": "Biscoitos salgados", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Processados"},
+        {"nome": "Detergente (fardo com 12 unidades)", "quantidade": 1, "preco_unitario": 36.00, "tipo": "Limpeza"},
+        {"nome": "Sabão em pó (3 kg)", "quantidade": 1, "preco_unitario": 36.00, "tipo": "Limpeza"},
+        {"nome": "Amaciante (2 unidades)", "quantidade": 2, "preco_unitario": 14.00, "tipo": "Limpeza"},
+        {"nome": "Desinfetante", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Limpeza"},
+        {"nome": "Água sanitária", "quantidade": 2, "preco_unitario": 6.00, "tipo": "Limpeza"},
+        {"nome": "Papel higiênico (fardo)", "quantidade": 1, "preco_unitario": 43.00, "tipo": "Limpeza"},
+        {"nome": "Papel toalha", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Limpeza"},
+        {"nome": "Saco de lixo", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Limpeza"},
+        {"nome": "Sabonetes", "quantidade": 6, "preco_unitario": 3.00, "tipo": "Limpeza"},
+        {"nome": "Xampus", "quantidade": 2, "preco_unitario": 15.00, "tipo": "Limpeza"},
+        {"nome": "Creme dental", "quantidade": 2, "preco_unitario": 8.00, "tipo": "Limpeza"},
     ],
 }
 VETOR_PRODUTOS = copy.deepcopy(BASE_VETOR_PRODUTOS)
@@ -39,7 +136,9 @@ def configurar_estilo():
     estilo.theme_use("clam")
     estilo.configure("TFrame", background="#f5f5f5")
     estilo.configure("Titulo.TLabel", font=("Segoe UI", 18, "bold"), background="#f5f5f5", foreground="#1f2937")
+    estilo.configure("Slogan.TLabel", font=("Georgia", 11, "italic"), background="#f5f5f5", foreground="#4b5563")
     estilo.configure("Campo.TLabel", font=("Segoe UI", 10, "bold"), background="#f5f5f5", foreground="#374151")
+    estilo.configure("Sair.TButton", font=("Segoe UI", 10, "bold"), foreground="#c62828")
     estilo.configure("BotaoPrincipal.TButton", font=("Segoe UI", 10, "bold"))
     estilo.configure("BotaoSecundario.TButton", font=("Segoe UI", 10))
     estilo.configure("BotaoTipo.TButton", font=("Segoe UI", 9, "bold"))
@@ -398,7 +497,7 @@ def principal():
     janela = tk.Tk()
     perfil_selecionado = tk.StringVar(value=PERFIL_ATUAL)
     campo_tipo = tk.StringVar(value=TIPOS_ALIMENTO[0])
-    janela.title("EAD Listy")
+    janela.title("EAD List")
     janela.geometry("1150x720")
     janela.minsize(900, 620)
     janela.configure(bg="#f5f5f5")
@@ -409,8 +508,17 @@ def principal():
     frame_principal = ttk.Frame(janela, padding=18)
     frame_principal.pack(fill=tk.BOTH, expand=True)
 
-    titulo = ttk.Label(frame_principal, text="EAD Listy", style="Titulo.TLabel")
-    titulo.grid(row=0, column=0, columnspan=12, sticky="w", pady=(0, 12))
+    cabecalho = ttk.Frame(frame_principal)
+    cabecalho.grid(row=0, column=0, columnspan=12, sticky="ew", pady=(0, 12))
+    titulo = ttk.Label(cabecalho, text="EAD List", style="Titulo.TLabel")
+    titulo.pack(side=tk.LEFT, anchor="s", padx=(0, 14))
+    slogan = ttk.Label(
+        cabecalho,
+        text="Essencial para a sua rotina, Acessível ao seu bolso, Direto no mercado.",
+        style="Slogan.TLabel",
+    )
+    slogan.pack(side=tk.LEFT, anchor="s", pady=(0, 3))
+    ttk.Button(cabecalho, text="SAIR", command=fechar_app_com_reset, style="Sair.TButton").pack(side=tk.RIGHT, anchor="n")
 
     frame_perfis = ttk.LabelFrame(frame_principal, text="Perfis", padding=(12, 10))
     frame_perfis.grid(row=1, column=0, columnspan=12, sticky="ew", pady=(0, 12))
