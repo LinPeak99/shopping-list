@@ -535,16 +535,19 @@ def principal():
     frame_entrada = ttk.LabelFrame(frame_principal, text="Personalizar lista", padding=12)
     frame_entrada.grid(row=2, column=0, columnspan=12, sticky="ew", pady=(0, 12))
 
-    ttk.Label(frame_entrada, text="Produto:", style="Campo.TLabel").grid(row=0, column=0, padx=(0, 8), pady=6, sticky="w")
-    campo_nome = ttk.Entry(frame_entrada, width=22)
+    frame_campos = ttk.Frame(frame_entrada)
+    frame_campos.grid(row=0, column=0, columnspan=6, sticky="w")
+
+    ttk.Label(frame_campos, text="Produto:", style="Campo.TLabel").grid(row=0, column=0, padx=(0, 4), pady=6, sticky="w")
+    campo_nome = ttk.Entry(frame_campos, width=22)
     campo_nome.grid(row=0, column=1, padx=(0, 10), pady=6, sticky="ew")
 
-    ttk.Label(frame_entrada, text="Quantidade:", style="Campo.TLabel").grid(row=0, column=2, padx=(0, 4), pady=6, sticky="w")
-    campo_quantidade = ttk.Entry(frame_entrada, width=10)
+    ttk.Label(frame_campos, text="Quantidade:", style="Campo.TLabel").grid(row=0, column=2, padx=(0, 4), pady=6, sticky="w")
+    campo_quantidade = ttk.Entry(frame_campos, width=10)
     campo_quantidade.grid(row=0, column=3, padx=(0, 10), pady=6, sticky="ew")
 
-    ttk.Label(frame_entrada, text="Preço unitário:", style="Campo.TLabel").grid(row=0, column=4, padx=(0, 8), pady=6, sticky="w")
-    campo_preco = ttk.Entry(frame_entrada, width=12)
+    ttk.Label(frame_campos, text="Preço unitário:", style="Campo.TLabel").grid(row=0, column=4, padx=(0, 4), pady=6, sticky="w")
+    campo_preco = ttk.Entry(frame_campos, width=12)
     campo_preco.grid(row=0, column=5, padx=(0, 12), pady=6, sticky="ew")
 
     ttk.Label(frame_entrada, text="Tipo do alimento:", style="Campo.TLabel").grid(row=1, column=0, padx=(0, 8), pady=(8, 6), sticky="w")
