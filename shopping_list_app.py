@@ -21,7 +21,6 @@ CORES = {
     "texto_secundario": "#4b5563",
     "destaque": "#172b45",
     "verde": "#2b827c",
-    "verde_hover": "#246e69",
     "terracota": "#2b827c",
     "terracota_hover": "#246e69",
     "perigo": "#f7e3e3",
@@ -253,7 +252,6 @@ def configurar_estilo():
         background=[("active", CORES["perigo_hover"]), ("pressed", CORES["perigo_hover"])],
     )
     estilo.configure("BotaoSecundario.TButton", font=("Segoe UI", 10))
-    estilo.configure("BotaoTipo.TButton", font=("Segoe UI", 9, "bold"))
     estilo.configure(
         "Treeview",
         rowheight=30,
@@ -315,14 +313,11 @@ def atualizar_status(texto):
 
 def obter_total_compra():
     """Calcula o total do perfil atual usando soma dos subtotais."""
-    # Usa sum() para somar os subtotais de cada item, substituindo um loop de acumulação manual.
-    subtotais = [calcular_subtotal(item) for item in VETOR_PRODUTOS[PERFIL_ATUAL]]
-    return sum(subtotais)
+    return sum(calcular_subtotal(item) for item in VETOR_PRODUTOS[PERFIL_ATUAL])
 
 
 def obter_total_itens():
     """Retorna a quantidade de itens do perfil atual."""
-    # Usa len() para contar elementos do vetor, substituindo um contador manual em laço.
     return len(VETOR_PRODUTOS[PERFIL_ATUAL])
 
 
@@ -771,10 +766,8 @@ def principal():
     label_total_compra = ttk.Label(frame_resumo, text="Total da categoria: R$ 0.00", style="Campo.TLabel")
     label_total_compra.grid(row=0, column=1, sticky="e")
 
-    # Repetição: a tabela é atualizada sempre que o perfil ou os dados forem alterados.
     atualizar_tabela()
 
-    # Seleção: a escolha do perfil define qual vetor será exibido ao usuário.
     janela.mainloop()
 
 
