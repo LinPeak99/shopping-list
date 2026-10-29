@@ -9,6 +9,28 @@ PERFIS = ["Solo", "Duo", "Familia"]
 TIPOS_ALIMENTO = ["Frutas", "Frios", "Fresco", "Legumes", "Processados", "Limpeza", "Bebida"]
 PERFIL_ATUAL = "Solo"
 ARQUIVO_PERSISTENCIA = os.path.join(os.path.dirname(__file__), "listas_personalizadas.json")
+ARQUIVO_FUNDO = os.path.join(os.path.dirname(__file__), "fundoTheme.png")
+
+CORES = {
+    "fundo": "#101820",
+    "painel": "#e9edf2",
+    "cartao": "#ffffff",
+    "painel_secundario": "#f0f2f5",
+    "borda": "#c8d0d8",
+    "texto": "#172334",
+    "texto_secundario": "#4b5563",
+    "destaque": "#172b45",
+    "verde": "#2b827c",
+    "verde_hover": "#246e69",
+    "terracota": "#2b827c",
+    "terracota_hover": "#246e69",
+    "perigo": "#f7e3e3",
+    "perigo_hover": "#f0d0d0",
+    "texto_perigo": "#923c42",
+    "selecao": "#d5e8e5",
+    "linha_alternada": "#edf0f4",
+    "sucesso": "#dcefe5",
+}
 
 # Estrutura base do vetor de produtos por perfil. Cada item representa uma posição do vetor.
 BASE_VETOR_PRODUTOS = {
@@ -134,16 +156,138 @@ def configurar_estilo():
     """Configura a aparência nativa usando ttk.Style."""
     estilo = ttk.Style()
     estilo.theme_use("clam")
-    estilo.configure("TFrame", background="#f5f5f5")
-    estilo.configure("Titulo.TLabel", font=("Segoe UI", 18, "bold"), background="#f5f5f5", foreground="#1f2937")
-    estilo.configure("Slogan.TLabel", font=("Georgia", 11, "italic"), background="#f5f5f5", foreground="#4b5563")
-    estilo.configure("Campo.TLabel", font=("Segoe UI", 10, "bold"), background="#f5f5f5", foreground="#374151")
-    estilo.configure("Sair.TButton", font=("Segoe UI", 10, "bold"), foreground="#c62828")
-    estilo.configure("BotaoPrincipal.TButton", font=("Segoe UI", 10, "bold"))
+    estilo.configure("TFrame", background=CORES["painel"])
+    estilo.configure("Painel.TFrame", background=CORES["painel"])
+    estilo.configure("Cartao.TFrame", background=CORES["cartao"])
+    estilo.configure("TLabelframe", background=CORES["cartao"], bordercolor=CORES["borda"])
+    estilo.configure(
+        "TLabelframe.Label",
+        background=CORES["cartao"],
+        foreground=CORES["destaque"],
+        font=("Segoe UI", 10, "bold"),
+    )
+    estilo.configure(
+        "Titulo.TLabel",
+        font=("Segoe UI", 18, "bold"),
+        background=CORES["painel"],
+        foreground=CORES["destaque"],
+    )
+    estilo.configure(
+        "Slogan.TLabel",
+        font=("Georgia", 11, "italic"),
+        background=CORES["painel"],
+        foreground=CORES["texto_secundario"],
+    )
+    estilo.configure(
+        "Campo.TLabel",
+        font=("Segoe UI", 10, "bold"),
+        background=CORES["cartao"],
+        foreground=CORES["texto"],
+    )
+    estilo.configure("TRadiobutton", background=CORES["cartao"], foreground=CORES["texto"])
+    estilo.map(
+        "TRadiobutton",
+        background=[("active", CORES["cartao"])],
+        foreground=[("active", CORES["verde"])],
+    )
+    estilo.configure(
+        "TEntry",
+        fieldbackground=CORES["painel_secundario"],
+        foreground=CORES["texto"],
+        insertcolor=CORES["texto"],
+        bordercolor=CORES["borda"],
+        lightcolor=CORES["borda"],
+        darkcolor=CORES["borda"],
+    )
+    estilo.configure(
+        "TCombobox",
+        fieldbackground=CORES["painel_secundario"],
+        background=CORES["painel_secundario"],
+        foreground=CORES["texto"],
+        arrowcolor=CORES["texto"],
+        bordercolor=CORES["borda"],
+        lightcolor=CORES["borda"],
+        darkcolor=CORES["borda"],
+    )
+    estilo.map(
+        "TCombobox",
+        fieldbackground=[("readonly", CORES["painel_secundario"])],
+        foreground=[("readonly", CORES["texto"])],
+        selectbackground=[("readonly", CORES["painel_secundario"])],
+        selectforeground=[("readonly", CORES["texto"])],
+    )
+    estilo.configure(
+        "TButton",
+        background=CORES["painel_secundario"],
+        foreground=CORES["texto"],
+        bordercolor=CORES["borda"],
+        padding=(10, 6),
+    )
+    estilo.map(
+        "TButton",
+        background=[("active", "#e2e7ec"), ("pressed", "#d9e0e6")],
+        foreground=[("disabled", "#8a949e")],
+    )
+    estilo.configure("Sair.TButton", font=("Segoe UI", 10, "bold"), foreground=CORES["texto"])
+    estilo.configure(
+        "BotaoPrincipal.TButton",
+        font=("Segoe UI", 10, "bold"),
+        background=CORES["terracota"],
+        foreground="#ffffff",
+        bordercolor=CORES["terracota"],
+    )
+    estilo.map(
+        "BotaoPrincipal.TButton",
+        background=[("active", CORES["terracota_hover"]), ("pressed", CORES["terracota_hover"])],
+        bordercolor=[("active", CORES["terracota_hover"])],
+    )
+    estilo.configure(
+        "BotaoPerigo.TButton",
+        font=("Segoe UI", 10, "bold"),
+        background=CORES["perigo"],
+        foreground=CORES["texto_perigo"],
+        bordercolor="#e8c5c7",
+    )
+    estilo.map(
+        "BotaoPerigo.TButton",
+        background=[("active", CORES["perigo_hover"]), ("pressed", CORES["perigo_hover"])],
+    )
     estilo.configure("BotaoSecundario.TButton", font=("Segoe UI", 10))
     estilo.configure("BotaoTipo.TButton", font=("Segoe UI", 9, "bold"))
-    estilo.configure("Treeview", rowheight=28, font=("Segoe UI", 10))
-    estilo.configure("Treeview.Heading", font=("Segoe UI", 10, "bold"))
+    estilo.configure(
+        "Treeview",
+        rowheight=30,
+        font=("Segoe UI", 10),
+        background=CORES["cartao"],
+        fieldbackground=CORES["cartao"],
+        foreground=CORES["texto"],
+    )
+    estilo.map(
+        "Treeview",
+        background=[("selected", CORES["selecao"])],
+        foreground=[("selected", "#ffffff")],
+    )
+    estilo.configure(
+        "Treeview.Heading",
+        font=("Segoe UI", 10, "bold"),
+        background=CORES["destaque"],
+        foreground="#ffffff",
+        bordercolor=CORES["destaque"],
+    )
+    estilo.map("Treeview.Heading", background=[("active", "#263d59")])
+    estilo.configure(
+        "Vertical.TScrollbar",
+        background="#c3cbd3",
+        troughcolor=CORES["painel_secundario"],
+        bordercolor=CORES["painel_secundario"],
+        arrowcolor=CORES["texto"],
+    )
+    estilo.configure(
+        "Status.TLabel",
+        background=CORES["sucesso"],
+        foreground="#245740",
+        padding=(5, 2),
+    )
 
 
 def carregar_dados_iniciais():
@@ -234,10 +378,11 @@ def atualizar_tabela():
     lista_ordenada = list(VETOR_PRODUTOS[PERFIL_ATUAL])
     lista_ordenada.reverse()
 
-    for item in lista_ordenada:
+    for indice, item in enumerate(lista_ordenada):
         arvore.insert(
             "",
             tk.END,
+            tags=("alternada" if indice % 2 else "normal",),
             values=(
                 item["nome"],
                 item["tipo"],
@@ -430,6 +575,7 @@ def confirmar_pedido():
     janela_pagamento = tk.Toplevel(janela)
     janela_pagamento.title("Forma de pagamento")
     janela_pagamento.geometry("420x220")
+    janela_pagamento.configure(bg=CORES["painel"])
     janela_pagamento.transient(janela)
     janela_pagamento.grab_set()
 
@@ -473,6 +619,7 @@ def confirmar_pedido():
         tela_final = tk.Toplevel(janela)
         tela_final.title("Pedido confirmado")
         tela_final.geometry("420x220")
+        tela_final.configure(bg=CORES["painel"])
         tela_final.transient(janela)
         tela_final.grab_set()
 
@@ -500,13 +647,35 @@ def principal():
     janela.title("EAD List")
     janela.geometry("1150x720")
     janela.minsize(900, 620)
-    janela.configure(bg="#f5f5f5")
+    janela.configure(bg=CORES["fundo"])
     janela.protocol("WM_DELETE_WINDOW", fechar_app_com_reset)
 
     configurar_estilo()
 
-    frame_principal = ttk.Frame(janela, padding=18)
-    frame_principal.pack(fill=tk.BOTH, expand=True)
+    canvas = tk.Canvas(janela, highlightthickness=0, bd=0, background=CORES["fundo"])
+    canvas.pack(fill=tk.BOTH, expand=True)
+    janela.imagem_fundo = tk.PhotoImage(file=ARQUIVO_FUNDO).subsample(2, 2)
+
+    margem_painel = 28
+    frame_principal = ttk.Frame(canvas, padding=18, style="Painel.TFrame")
+    painel = canvas.create_window(margem_painel, margem_painel, anchor="nw", window=frame_principal)
+
+    def ajustar_fundo(evento):
+        largura_imagem = janela.imagem_fundo.width()
+        altura_imagem = janela.imagem_fundo.height()
+        canvas.delete("fundo")
+        for x in range(0, evento.width, largura_imagem):
+            for y in range(0, evento.height, altura_imagem):
+                canvas.create_image(x, y, image=janela.imagem_fundo, anchor="nw", tags="fundo")
+        canvas.tag_lower("fundo")
+        canvas.coords(painel, margem_painel, margem_painel)
+        canvas.itemconfigure(
+            painel,
+            width=max(1, evento.width - 2 * margem_painel),
+            height=max(1, evento.height - 2 * margem_painel),
+        )
+
+    canvas.bind("<Configure>", ajustar_fundo)
 
     cabecalho = ttk.Frame(frame_principal)
     cabecalho.grid(row=0, column=0, columnspan=12, sticky="ew", pady=(0, 12))
@@ -535,7 +704,7 @@ def principal():
     frame_entrada = ttk.LabelFrame(frame_principal, text="Personalizar lista", padding=12)
     frame_entrada.grid(row=2, column=0, columnspan=12, sticky="ew", pady=(0, 12))
 
-    frame_campos = ttk.Frame(frame_entrada)
+    frame_campos = ttk.Frame(frame_entrada, style="Cartao.TFrame")
     frame_campos.grid(row=0, column=0, columnspan=6, sticky="w")
 
     ttk.Label(frame_campos, text="Produto:", style="Campo.TLabel").grid(row=0, column=0, padx=(0, 4), pady=6, sticky="w")
@@ -555,12 +724,12 @@ def principal():
     combo_tipo.grid(row=1, column=1, padx=(0, 12), pady=(8, 6), sticky="w")
 
     ttk.Button(frame_entrada, text="Adicionar item", command=adicionar_item, style="BotaoPrincipal.TButton").grid(row=2, column=0, padx=(0, 8), pady=10, sticky="w")
-    ttk.Button(frame_entrada, text="Remover item", command=remover_item_selecionado, style="BotaoPrincipal.TButton").grid(row=2, column=1, padx=(0, 8), pady=10, sticky="w")
-    ttk.Button(frame_entrada, text="Alterar quantidade", command=alterar_quantidade_item, style="BotaoPrincipal.TButton").grid(row=2, column=2, padx=(0, 8), pady=10, sticky="w")
-    ttk.Button(frame_entrada, text="Alterar preço", command=alterar_preco_item, style="BotaoPrincipal.TButton").grid(row=2, column=3, padx=(0, 8), pady=10, sticky="w")
+    ttk.Button(frame_entrada, text="Remover item", command=remover_item_selecionado, style="BotaoPerigo.TButton").grid(row=2, column=1, padx=(0, 8), pady=10, sticky="w")
+    ttk.Button(frame_entrada, text="Alterar quantidade", command=alterar_quantidade_item, style="BotaoSecundario.TButton").grid(row=2, column=2, padx=(0, 8), pady=10, sticky="w")
+    ttk.Button(frame_entrada, text="Alterar preço", command=alterar_preco_item, style="BotaoSecundario.TButton").grid(row=2, column=3, padx=(0, 8), pady=10, sticky="w")
 
     status_var = tk.StringVar(value="Sistema iniciado. Escolha um perfil para carregar a lista.")
-    status_label = ttk.Label(frame_principal, textvariable=status_var, foreground="#1d4ed8")
+    status_label = ttk.Label(frame_principal, textvariable=status_var, style="Status.TLabel")
     status_label.grid(row=5, column=0, columnspan=12, sticky="w", pady=(0, 8))
 
     tabela_frame = ttk.Frame(frame_principal)
@@ -570,6 +739,8 @@ def principal():
 
     colunas = ("Produto", "Tipo", "Quantidade", "Preço Unit.", "Subtotal")
     arvore = ttk.Treeview(tabela_frame, columns=colunas, show="headings")
+    arvore.tag_configure("normal", background=CORES["cartao"])
+    arvore.tag_configure("alternada", background=CORES["linha_alternada"])
 
     for coluna in colunas:
         arvore.heading(coluna, text=coluna)

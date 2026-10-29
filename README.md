@@ -24,6 +24,7 @@ Os perfis disponíveis são:
 - Cálculo automático de subtotal e total da categoria
 - Confirmação de pedido com escolha de forma de pagamento
 - Parcelamento em cartão de crédito de 1 a 12 vezes
+- Fundo ilustrado com painel claro, tabela em alto contraste e paleta inspirada na referência visual
 - Reinicialização da base padrão ao fechar a aplicação
 - Persistência local em arquivo JSON
 
@@ -70,6 +71,8 @@ python .\shopping_list_app.py
 ```text
 shopping-list/
 ├── shopping_list_app.py          # Aplicação principal
+├── fundoTheme.png                # Fundo usado pelo aplicativo
+
 ├── listas_personalizadas.json    # Dados persistidos por perfil
 ├── README.md                     # Documentação pública do projeto
 ├── ROADMAP.md                    # Plano de desenvolvimento e evolução
